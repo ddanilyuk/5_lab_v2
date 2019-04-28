@@ -4,7 +4,7 @@ public class Text {
     private Sentence[] sentences;
     private static String[] sentencesEdited;
     private static String[][][] sentencesEdited_v2;
-    private static String res;
+    private static String result;
 
 
     public Text(String s) {
@@ -18,18 +18,18 @@ public class Text {
             sentencesEdited[i] = Sentence.getSentenceMembersEdited();
             sentencesEdited_v2[i] = Sentence.getSentenceMembersEdited_v2();
         }
-
-
     }
+
 
     public static void getSentencesEdited() {
-        res = "";
-        for (String some:sentencesEdited) {
-            res += some;
+        result = "";
+        for (String some : sentencesEdited) {
+            result += some;
         }
 
-        System.out.println(res);
+        System.out.println(result);
     }
+
 
     public static void getSentencesEdited_v2() {
 
@@ -42,12 +42,9 @@ public class Text {
                 }
                 if (i != some.length - 2) {
                     System.out.print(" ");
-
                 }
             }
-
         }
-
     }
 
 
@@ -58,21 +55,5 @@ public class Text {
             result += sentence.toString() + " ";
         }
         return result;
-    }
-
-
-    public String getWordsWithLengthFromQuestions(int wordLength) {
-        String result = "";
-        for (Sentence sentence : sentences) {
-            if (sentence.isQuestion()) {
-                result += sentence.getWordsWithLength(wordLength) + "\n";
-            }
-        }
-        return result;
-    }
-
-
-    static void getAnswer(String text) {
-        Text enter = new Text(text);
     }
 }
