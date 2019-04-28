@@ -4,7 +4,6 @@ public class Text {
     private Sentence[] sentences;
     private static String[] sentencesEdited;
     private static String[][][] sentencesEdited_v2;
-    private static String result;
 
 
     public Text(String s) {
@@ -22,7 +21,7 @@ public class Text {
 
 
     public static void getSentencesEdited() {
-        result = "";
+        String result = "";
         for (String some : sentencesEdited) {
             result += some;
         }
