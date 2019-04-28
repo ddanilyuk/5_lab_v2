@@ -8,6 +8,7 @@ public class Word extends SentenceMember {
 
 
     public Word(String s) {
+
         int j = 1;
         int h = 1;
         int for_none = -1;
@@ -42,6 +43,10 @@ public class Word extends SentenceMember {
                 h += 1;
             }
         }
+
+        //TO TRY SOME
+        //System.out.println(Arrays.toString(letters));
+        //System.out.println(Arrays.toString(lettersEdited_v2));
     }
 
 
